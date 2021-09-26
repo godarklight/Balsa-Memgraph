@@ -1,0 +1,13 @@
+ModCFG
+{
+    title = Memgraph
+    author = godarklight
+    modVersion = 0.1.0
+    Plugin
+    {
+        name = Memgraph
+        description = Figure out how messy a modder you are!
+        asmpath = Addons\Memgraph\Memgraph.dll
+        order = 100
+    }
+} 
