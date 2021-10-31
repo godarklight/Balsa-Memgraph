@@ -20,9 +20,11 @@ namespace Memgraph
         private Rect dragRect;
         private Rect windowPos;
         private Texture2D tex;
+        private GUILayoutOption[] boxOptions;
 
         public void Start()
         {
+            boxOptions = new GUILayoutOption[] { GUILayout.ExpandWidth(false), GUILayout.ExpandHeight(false), GUILayout.Width(WIDTH), GUILayout.Height(HEIGHT) };
             dragRect = new Rect(0, 0, 10000, 20);
             windowPos = new Rect(100, 100, WIDTH + 20, HEIGHT + 50);
             tex = new Texture2D(WIDTH, HEIGHT, TextureFormat.RGBA32, false);
@@ -71,7 +73,7 @@ namespace Memgraph
             }
             GUILayout.EndHorizontal();
             GUILayout.FlexibleSpace();
-            GUILayout.Box(tex, GUILayout.ExpandWidth(false), GUILayout.ExpandHeight(false), GUILayout.Width(WIDTH), GUILayout.Height(HEIGHT));
+            GUILayout.Box(tex, boxOptions);
             GUILayout.EndVertical();
         }
 

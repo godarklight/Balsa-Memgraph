@@ -2,12 +2,21 @@ ModCFG
 {
     title = Memgraph
     author = godarklight
-    modVersion = 0.1.0
+    modVersion = 0.1.1
+    requiresGameVersion = 0.101.2
+    imgPath = Addons\Memgraph\preview.png
     Plugin
     {
         name = Memgraph
         description = Figure out how messy a modder you are!
         asmpath = Addons\Memgraph\Memgraph.dll
         order = 100
+    }
+    Plugin
+    {
+        name = Memgraph
+        description = Figure out how messy a modder you are!
+        asmpath = Addons\Memgraph\Modlog.dll
+        order = 50
     }
 } 
